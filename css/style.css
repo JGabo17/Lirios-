@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&family=Playfair+Display:ital@0;1&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #f0f0f0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.greetings {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.greetings>span {
+    display: inline-block;
+    animation: glow 3s ease-in-out infinite alternate;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    to {
+        text-shadow: 0 0 20px rgba(137, 207, 240, 0.6), 0 0 30px rgba(155, 89, 182, 0.6);
+        color: #fff;
+    }
+}
+
+/* Staggered animation delays for up to 12 chars */
+.greetings>span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.greetings>span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.greetings>span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.greetings>span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.greetings>span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.greetings>span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.greetings>span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.greetings>span:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.greetings>span:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.greetings>span:nth-child(10) {
+    animation-delay: 1.0s;
+}
+
+.greetings>span:nth-child(11) {
+    animation-delay: 1.1s;
+}
+
+.greetings>span:nth-child(12) {
+    animation-delay: 1.2s;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.button {
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.botones {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.botones a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.botones a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+.botones a:active {
+    transform: translateY(1px);
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .greetings {
+        font-size: 3.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .botones a {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .greetings {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
